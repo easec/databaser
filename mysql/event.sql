@@ -35,6 +35,12 @@ INSERT INTO `event_db`.`event_tbl` (titel, datum, pris)
 VALUES
 ('Databashantering', 220310, 10000),
 ('Java', 220311, 5000),
-('Klienhantering', 220509, 15000)
+('Klienthantering', 220509, 15000)
+
+INSERT INTO `event_db`.`person_tbl` (fNamn, eNamn)
+VALUES
+('Gullan', 'Holm'),
+('Christer', 'Larsson'),
+('Nisse', 'Hult')
 
 
