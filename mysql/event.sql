@@ -22,12 +22,12 @@ CREATE TABLE `event_db`.`deltagare_tbl` (
   INDEX `person_idx` (`person` ASC),
   CONSTRAINT `event`
     FOREIGN KEY (`event`)
-    REFERENCES `event`.`event` (`eventId`)
+    REFERENCES `event_db`.`event_tbl` (`eventId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `person`
     FOREIGN KEY (`person`)
-    REFERENCES `event`.`person` (`personId`)
+    REFERENCES `event_db`.`person_tbl` (`personId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
  
