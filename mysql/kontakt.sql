@@ -1,7 +1,8 @@
 CREATE DATABASE IF NOT EXISTS kontakt_db DEFAULT CHARACTER SET 'utf8mb4';
 
+
 CREATE TABLE `kontakt_db`,`meddelande_tbl` (    
-	`meddelande_Id` int NOT NULL auto_increment,
+	`meddelande_Id` int NOT NULL AUTO_INCREMENT,
 	`anv_Id` int DEFAULT 0 NOT NULL,
 	`anv_Namn` varchar(50) DEFAULT `` NOT NULL,
 	`anv_Mail` varchar(50) DEFAULT `` NOT NULL,
@@ -11,7 +12,7 @@ CREATE TABLE `kontakt_db`,`meddelande_tbl` (
 	);
 
 CREATE TABLE `kontakt.db`,`anv_tbl` (
-	`anv_id` int NOT NULL auto_increment,
+	`anv_id` int NOT NULL AUTO_INCREMENT,
         `fnamn` varchar(50) NOT NULL,
         `enamn` varchar(50) NOT NULL,
 	`adress1` varchar(50) NOT NULL,
