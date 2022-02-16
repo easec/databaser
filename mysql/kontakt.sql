@@ -11,7 +11,7 @@ CREATE TABLE `kontakt_db`.`meddelande_tbl` (
 	PRIMARY KEY (`meddelande_Id`)
 	);
 
-CREATE TABLE `kontakt.db`.`anv_tbl` (
+CREATE TABLE `kontakt_db`.`anv_tbl` (
 	`anv_id` INT NOT NULL AUTO_INCREMENT,
         `fnamn` VARCHAR(50) NOT NULL,
         `enamn` VARCHAR(50) NOT NULL,
