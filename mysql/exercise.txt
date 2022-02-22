@@ -1,0 +1,1 @@
+SELECT artiklar_tbl.Artnr, artiklar_tbl.Artnamn, artiklar_tbl.Lagerantal-artiklar_tbl.Bestpunkt AS "Antalet under beställningspunkt" FROM artiklar_tbl WHERE artiklar_tbl.Lagerantal < artiklar_tbl.Bestpunkt;
