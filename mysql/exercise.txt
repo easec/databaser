@@ -4,5 +4,6 @@ SELECT artiklar_tbl.Artnamn, artiklar_tbl.Utpris FROM artiklar_tbl, levart_tbl W
 alternativt
 SELECT artiklar_tbl.Artnamn, artiklar_tbl.Utpris FROM artiklar_tbl WHERE artiklar_tbl.Artnr IN (SELECT levart_tbl.Artnr FROM levart_tbl WHERE levart_tbl.levpris > 10);
 
+SELECT SUM(artiklar_tbl.Lagerantal * artiklar_tbl.Utpris) AS Lagervärde FROM artiklar_tbl;
 
 SELECT artiklar_tbl.Artnr, artiklar_tbl.Artnamn, artiklar_tbl.Lagerantal-artiklar_tbl.Bestpunkt AS "Antalet under beställningspunkt" FROM artiklar_tbl WHERE artiklar_tbl.Lagerantal < artiklar_tbl.Bestpunkt;
