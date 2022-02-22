@@ -1,1 +1,4 @@
+SELECT levart_tbl.Levnr, levart_tbl.Levpris AS Inköpspris, artiklar_tbl.Utpris AS Försäljningspris FROM artiklar_tbl, levart_tbl WHERE artiklar_tbl.Artnr=levart_tbl.artnr and artiklar_tbl.Artnr = 1;
+
+
 SELECT artiklar_tbl.Artnr, artiklar_tbl.Artnamn, artiklar_tbl.Lagerantal-artiklar_tbl.Bestpunkt AS "Antalet under beställningspunkt" FROM artiklar_tbl WHERE artiklar_tbl.Lagerantal < artiklar_tbl.Bestpunkt;
