@@ -7,5 +7,7 @@ SELECT artiklar_tbl.Artnamn, artiklar_tbl.Utpris FROM artiklar_tbl WHERE artikla
 SELECT SUM(artiklar_tbl.Lagerantal * artiklar_tbl.Utpris) AS Lagervärde FROM artiklar_tbl;
 
 SELECT artiklar_tbl.Artnr AS Artikelnummer, artiklar_tbl.Artnamn FROM artiklar_tbl, levart_tbl WHERE artiklar_tbl.Artnr = levart_tbl.Artnr AND levart_tbl.Levnr = 1 ORDER BY artiklar_tbl.Artnamn;
+Alternativt:
+SELECT artiklar_tbl.Artnr AS Artikelnummer, artiklar_tbl.Artnamn FROM artiklar_tbl WHERE artiklar_tbl.Artnr IN (SELECT levart_tbl.Artnr FROM levart_tbl WHERE levart_tbl.Levnr = 1) ORDER BY artiklar_tbl.Artnr;
 
 SELECT artiklar_tbl.Artnr, artiklar_tbl.Artnamn, artiklar_tbl.Lagerantal-artiklar_tbl.Bestpunkt AS "Antalet under beställningspunkt" FROM artiklar_tbl WHERE artiklar_tbl.Lagerantal < artiklar_tbl.Bestpunkt;
