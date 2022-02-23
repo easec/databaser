@@ -15,3 +15,6 @@ SELECT COUNT(*) FROM levart_tbl, leverantor_tbl WHERE levart_tbl.Levnr = leveran
 SELECT artiklar_tbl.Artnamn, levart_tbl.Levtid, leverantor_tbl.Namn FROM artiklar_tbl, levart_tbl, leverantor_tbl WHERE artiklar_tbl.Artnr = levart_tbl.Artnr AND levart_tbl.Levnr = leverantor_tbl.Levnr AND leverantor_tbl.Postort = "Lomma" ORDER BY levart_tbl.Levtid;
 
 SELECT artiklar_tbl.Artnr, artiklar_tbl.Artnamn, artiklar_tbl.Lagerantal-artiklar_tbl.Bestpunkt AS "Antalet under beställningspunkt" FROM artiklar_tbl WHERE artiklar_tbl.Lagerantal < artiklar_tbl.Bestpunkt;
+
+Om fel Artikelnr i levart_tbl: UPDATE levart_tbl SET Artnr = 3 WHERE Levartnr = 3;
+
